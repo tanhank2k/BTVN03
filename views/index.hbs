@@ -1,0 +1,75 @@
+
+<section class="col-md-6 bg-white position-fixed">
+        <h1 class="text-center">{{title}}</h1>
+        <div class="container-fluid">
+            <form action="" method="POST" onchange="check()" onsubmit="return test();">
+            <div class="row">
+                <div class="col">
+                    
+                        <div class="row">
+                        
+                            <div class="col-md-4 d-inline p-1 ">                        
+                                <label for="fnum">Số thứ nhất</label>
+                            </div>
+                            
+                            <div class="col-md d-inline">
+                                <input type="text" id="fnum" name="fnum" value="{{number1}}">
+                            </div>
+                        </div>
+            
+                        <div class="row">
+                            
+                            <div class="col-md-4 d-inline p-1">                        
+                                <label for="snum">Số thứ hai</label>
+                            </div>
+                            <div class="col-md-4 d-inline">
+                                <input type="text" id="snum" name="snum" value="{{number2}}">
+                            </div>
+                            
+                        </div>
+
+                </div>
+                <div class= "col-md-6 text-left">                
+                        <input type="radio" id="multi" name="multi" {{check_multi}}>
+                        <label for="multi">Nhân</label> 
+                        <input type="radio" id="divide" name="divide" {{check_divide}}> 
+                        <label for="divide">Chia</label> <br>
+                        <input type="radio"  id="plus" name="plus" {{check_plus}}>
+                        <label for="plus">Cộng</label> 
+                        <input type="radio"  id="sub" name="sub" {{check_sub}}>
+                        <label for="sub">Trừ</label> 
+                </div>
+            </div>
+
+            <div class="row">
+                
+                    <div class="col-md-2 d-inline p-1">                        
+                        <label for="result">Kết quả</label>
+                    </div>
+                    
+                    <div class="col-md-4 d-inline">
+                        <input type="text" id="result" name="result" value="{{result_value}}" >
+                    </div>
+                    
+                    <div class="col-md d-inline">
+                        <input class="f-left" type="submit" value="Tính"></input>
+                    </div>
+
+            </div>
+
+            </form>
+            <div class="row">
+                    
+                <div class="col-md-2 d-inline p-1">                        
+                    Thông báo
+                </div>
+                
+                <div class="col-md d-inline p-1 text-danger" id="msg">
+                    {{Notif}}
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </section>
